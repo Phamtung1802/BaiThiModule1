@@ -11,11 +11,10 @@ nếu không nằm trong dãy Fibonacci. -->
     <body>
         
         <script>
-            function isFibonacci(){
+            function isFibonacci(SoKiemTra){
                 let SoThuNhat=0;
                 let SoThuHai=1;
                 let SoTiepTheo=1
-                let SoKiemTra= +prompt("Nhập Số Muốn Kiểm Tra");
                 while (SoTiepTheo<=SoKiemTra){
                     SoTiepTheo=SoThuNhat+SoThuHai;
                     SoThuNhat=SoThuHai;
@@ -23,12 +22,13 @@ nếu không nằm trong dãy Fibonacci. -->
                     console.log("soTiepTheo "+ SoTiepTheo)
                     if(SoTiepTheo==SoKiemTra){
                         alert(SoKiemTra+ " là số Fibonacci")
-                        return;
+                        return true;
                     }
                 }
                 alert(SoKiemTra+ " không phải là số Fibonacci")
+                return false;
             }
-            isFibonacci();
+            isFibonacci(13);
         </script>
     </body>
 </html>
