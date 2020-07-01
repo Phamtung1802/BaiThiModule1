@@ -1,0 +1,30 @@
+<!-- Viết hàm tryRemoveFromArray() nhận vào một mảng các
+số nguyên, và một số nguyên x. Hàm  trả về mảng ban 
+đầu nếu không có số nguyên x trong mảng. Nếu tìm thấy
+số nguyên x trả về mảng sau khi xóa các số nguyên x 
+đó -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cau 2</title>
+
+    </head>
+    <body>
+        
+        <script>
+            let MangSoNguyen=[3,4,5,4,1,5,6,8,2,8,9,10,4];
+            function tryRemoveFromArray(array,x){
+               for(i=0;i<array.length;i++){
+                    if(array[i]==x){
+                        array.splice(i,1);
+                    }
+                }
+                document.write("mảng sau khi xóa phần tử X là "+ array);
+                return array;
+            }
+            
+            tryRemoveFromArray(MangSoNguyen,0);
+        </script>
+    </body>
+</html>
